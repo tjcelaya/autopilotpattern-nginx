@@ -79,4 +79,7 @@ function log {
     fi
 }
 
-HANDLER=$1; shift; $HANDLER $@
+HANDLER="$1"; shift
+if [[ "${HANDLER}" =~ ^(deploy_challenge|clean_challenge|deploy_cert|unchanged_cert)$ ]]; then
+  "$HANDLER" "$@"
+fi

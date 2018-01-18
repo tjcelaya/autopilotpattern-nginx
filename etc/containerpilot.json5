@@ -81,7 +81,7 @@
     {
       name: "acme-checkin",
       exec: [ "acme", "checkin" ],
-      timeout: "10s",
+      timeout: "30s",
       when: {
         interval: "1h",
       }
