@@ -45,11 +45,11 @@ RUN export CONTAINERPILOT_CHECKSUM=6da4a4ab3dd92d8fd009cdb81a4d4002a90c8b7c \
     && rm /tmp/containerpilot.tar.gz
 
 # Add Dehydrated
-RUN export DEHYDRATED_VERSION=v0.3.1 \
+RUN export DEHYDRATED_VERSION=v0.5.0 \
     && curl --retry 8 --fail -Lso /tmp/dehydrated.tar.gz "https://github.com/lukas2511/dehydrated/archive/${DEHYDRATED_VERSION}.tar.gz" \
     && tar xzf /tmp/dehydrated.tar.gz -C /tmp \
-    && mv /tmp/dehydrated-0.3.1/dehydrated /usr/local/bin \
-    && rm -rf /tmp/dehydrated-0.3.1
+    && mv /tmp/dehydrated-0.5.0/dehydrated /usr/local/bin \
+    && rm -rf /tmp/dehydrated-0.5.0
 
 # Add jq
 RUN export JQ_VERSION=1.5 \
